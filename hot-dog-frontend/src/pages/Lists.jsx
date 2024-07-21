@@ -25,7 +25,7 @@ const Lists = () => {
     const fetchLists = async () => {
       try {
         const response = await axios.get(
-          "https://http-codes-api.onrender.com/api/lists",
+          "https://http-dog-app.onrender.com/api/lists",
           {
             headers: { Authorization: `Bearer ${user.token}` },
           }
@@ -50,7 +50,7 @@ const Lists = () => {
   const handleDelete = async (listId) => {
     try {
       await axios.delete(
-        `https://http-codes-api.onrender.com/api/lists/${listId}`,
+        `https://http-dog-app.onrender.com/api/lists/${listId}`,
         {
           headers: { Authorization: `Bearer ${user.token}` },
         }
@@ -70,7 +70,7 @@ const Lists = () => {
   const handleSaveEdit = async () => {
     try {
       await axios.put(
-        `https://http-codes-api.onrender.com/api/lists/${editingList._id}`,
+        `https://http-dog-app.onrender.com/api/lists/${editingList._id}`,
         { name: editingList.name },
         {
           headers: { Authorization: `Bearer ${user.token}` },
